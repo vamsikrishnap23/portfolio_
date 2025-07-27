@@ -37,7 +37,7 @@ const projectsData = [
 export function ProjectsPage() {
   return (
     <PageLayout>
-      <div className="min-h-screen w-full bg-transparent p-8 sm:px-16 md:px-24 relative overflow-y-auto">
+      <div className="min-h-screen w-full bg-transparent p-8 sm:px-16 md:px-24 relative">
         <div className="relative z-10 w-full max-w-5xl mx-auto">
           <Link
             to="/"
@@ -49,7 +49,12 @@ export function ProjectsPage() {
           </Link>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lowercase">
             {projectsData.map((project, index) => (
-              <ProjectCard key={index} index={index} {...project} />
+              <ProjectCard
+                key={index}
+                index={index}
+                {...project}
+                // The style prop causing the issue is removed.
+              />
             ))}
           </div>
         </div>

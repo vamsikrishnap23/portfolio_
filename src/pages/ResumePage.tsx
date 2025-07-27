@@ -70,7 +70,7 @@ const ResumeSection = ({ title, children }) => (
 export function ResumePage() {
   return (
     <PageLayout>
-      <div className="min-h-screen w-full bg-transparent p-8 sm:px-16 md:px-24 relative overflow-y-auto">
+      <div className="min-h-screen w-full bg-transparent p-8 sm:px-16 md:px-24 relative">
         <div className="relative z-10 w-full max-w-7xl mx-auto lowercase">
           <Link
             to="/"
@@ -85,8 +85,6 @@ export function ResumePage() {
             style={{
               backdropFilter: "blur(10px)",
               WebkitBackdropFilter: "blur(10px)",
-              animation: `fadeInUp 0.5s ease-out forwards`,
-              opacity: 0,
               background: "rgba(255, 255, 255, 0.1)",
             }}
           >
