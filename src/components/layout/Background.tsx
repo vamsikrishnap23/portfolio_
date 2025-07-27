@@ -97,7 +97,7 @@ export const Background = () => {
   return (
     <>
       <MeshGradientStyles />
-      <div className="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+      <div className="fixed top-0 left-0 w-screen h-screen -z-10">
         {theme === "dark" ? <DarkBackground /> : <LightBackground />}
       </div>
     </>
