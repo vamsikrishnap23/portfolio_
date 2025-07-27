@@ -41,20 +41,20 @@ export function ProjectsPage() {
         <div className="relative z-10 w-full max-w-5xl mx-auto">
           <Link
             to="/"
-            className="group flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300 mb-12"
+            className="group flex items-center gap-2 text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300 mb-12"
             style={{ fontFamily: "'General Sans', sans-serif" }}
           >
             <FaArrowLeft className="transition-transform duration-300 group-hover:-translate-x-1" />
             <span className="italic">/home</span>
           </Link>
           <h1
-            className="text-3xl font-semibold text-gray-900 dark:text-gray-100 mb-1"
+            className="text-3xl font-semibold text-gray-900 dark:text-gray-100 mb-1 drop-shadow-sm"
             style={{ fontFamily: "'General Sans', sans-serif" }}
           >
             /projects
           </h1>
           <p
-            className="text-base text-gray-700 dark:text-gray-400 mb-4"
+            className="text-base text-gray-800 dark:text-gray-400 mb-4"
             style={{ fontFamily: "'Inter', sans-serif'" }}
           >
             Things I’ve built recently — practical, simple, and still improving.

@@ -15,7 +15,7 @@ const SocialLink = ({ href, icon: Icon, isEmail = false }: SocialLinkProps) => (
     href={isEmail ? href : href}
     target="_blank"
     rel="noopener noreferrer"
-    className="text-gray-500 dark:text-gray-500 hover:text-black dark:hover:text-white transition-colors duration-300"
+    className="text-gray-600 dark:text-gray-500 hover:text-black dark:hover:text-white transition-colors duration-300"
   >
     <Icon size={20} />
   </a>
@@ -27,21 +27,21 @@ export function HomePage() {
       <div className="flex h-screen w-full items-center justify-start bg-transparent p-8 sm:px-16 md:px-24 relative">
         <div className="max-w-3xl text-left relative z-10">
           <h2
-            className="text-4xl md:text-6xl font-semibold text-gray-900 dark:text-gray-100 leading-tight capitalize"
+            className="text-4xl md:text-6xl font-semibold text-gray-900 dark:text-gray-100 leading-tight drop-shadow-sm"
             style={{ fontFamily: "'General Sans', sans-serif" }}
           >
-            <span className="font-bold">Vamsi Krishna Pullabhotla</span>
+            <span className="font-bold">i'm vamsi krishna pullabhotla</span>
           </h2>
 
           <h4
-            className="mt-2 text-2xl md:text-3xl text-gray-600 dark:text-gray-400 font-normal italic"
+            className="mt-2 text-2xl md:text-3xl text-gray-700 dark:text-gray-400 font-normal italic drop-shadow-sm"
             style={{ fontFamily: "'General Sans', sans-serif" }}
           >
             <i>building calm tools with chaotic tech.</i>
           </h4>
 
           <p
-            className="mt-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+            className="mt-6 text-lg text-gray-800 dark:text-gray-300 leading-relaxed lowercase"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             I’m a <strong>developer</strong> working with{" "}
@@ -69,7 +69,7 @@ export function HomePage() {
             className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8"
             style={{ fontFamily: "'General Sans', sans-serif" }}
           >
-            <nav className="flex items-center gap-6 text-base font-medium text-gray-600 dark:text-gray-300">
+            <nav className="flex items-center gap-6 text-base font-medium text-gray-700 dark:text-gray-300">
               <Link
                 to="/projects"
                 className="italic hover:text-black dark:hover:text-white hover:underline transition-colors duration-300"

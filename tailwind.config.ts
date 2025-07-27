@@ -8,7 +8,13 @@ export default {
     "./src/**/*.{ts,tsx}",
   ],
   theme: {
-    // ... your existing theme config
+    extend: {
+      fontFamily: {
+        heading: ['"Playfair Display"', "serif"],
+        body: ['"Manrope"', "sans-serif"],
+        ui: ['"Inter"', "sans-serif"],
+      },
+    },
   },
   plugins: [],
 };

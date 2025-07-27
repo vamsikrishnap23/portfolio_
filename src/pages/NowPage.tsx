@@ -9,7 +9,7 @@ export function NowPage() {
         <div className="max-w-3xl text-left w-full">
           <Link
             to="/"
-            className="group flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300 mb-12"
+            className="group flex items-center gap-2 text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300 mb-12"
             style={{ fontFamily: "'General Sans', sans-serif" }}
           >
             <FaArrowLeft className="transition-transform duration-300 group-hover:-translate-x-1" />
@@ -17,20 +17,20 @@ export function NowPage() {
           </Link>
 
           <h1
-            className="text-4xl font-semibold text-gray-900 dark:text-gray-100"
+            className="text-4xl font-semibold text-gray-900 dark:text-gray-100 drop-shadow-sm"
             style={{ fontFamily: "'General Sans', sans-serif" }}
           >
             /now
           </h1>
           <p
-            className="text-base text-gray-700 dark:text-gray-400 mb-4 lowercase"
+            className="text-base text-gray-800 dark:text-gray-400 mb-4 lowercase"
             style={{ fontFamily: "'Inter', sans-serif'" }}
           >
             A snapshot of what I’m currently focused on.
           </p>
 
           <div
-            className="mt-8 space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+            className="mt-8 space-y-6 text-lg text-gray-800 dark:text-gray-300 leading-relaxed"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             <p>

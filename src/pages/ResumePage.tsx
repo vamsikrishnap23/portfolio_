@@ -60,13 +60,13 @@ interface ResumeSectionProps {
 const ResumeSection = ({ title, children }: ResumeSectionProps) => (
   <div className="mb-12 last:mb-0">
     <h2
-      className="text-2xl font-semibold text-black dark:text-white mb-4 border-b border-black/10 dark:border-white/10 pb-2 capitalize"
+      className="text-2xl font-semibold text-black dark:text-white mb-4 border-b border-black/10 dark:border-white/10 pb-2 capitalize drop-shadow-sm"
       style={{ fontFamily: "'General Sans', sans-serif" }}
     >
       {title}
     </h2>
     <div
-      className="text-gray-700 dark:text-gray-300"
+      className="text-gray-800 dark:text-gray-300"
       style={{ fontFamily: "'Inter', sans-serif" }}
     >
       {children}
@@ -81,20 +81,20 @@ export function ResumePage() {
         <div className="relative z-10 w-full max-w-7xl mx-auto">
           <Link
             to="/"
-            className="group flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300 mb-12"
+            className="group flex items-center gap-2 text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300 mb-12"
             style={{ fontFamily: "'General Sans', sans-serif" }}
           >
             <FaArrowLeft className="transition-transform duration-300 group-hover:-translate-x-1" />
             <span className="italic">/home</span>
           </Link>
           <h1
-            className="text-3xl font-semibold text-gray-900 dark:text-gray-100 mb-1"
+            className="text-3xl font-semibold text-gray-900 dark:text-gray-100 mb-1 drop-shadow-sm"
             style={{ fontFamily: "'General Sans', sans-serif" }}
           >
             /resume
           </h1>
           <p
-            className="text-base text-gray-700 dark:text-gray-400 mb-4"
+            className="text-base text-gray-800 dark:text-gray-400 mb-4"
             style={{ fontFamily: "'Inter', sans-serif'" }}
           >
             My background, skills, and what I’ve worked on so far.
@@ -112,11 +112,11 @@ export function ResumePage() {
               <div className="w-full lg:w-2/3">
                 <ResumeSection title="education">
                   <div className="mb-4">
-                    <h3 className="text-lg text-gray-800 dark:text-gray-100 font-medium">
+                    <h3 className="text-lg text-gray-900 dark:text-gray-100 font-medium">
                       {resumeData.education.institution}
                     </h3>
                     <p>{resumeData.education.degree}</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-sm text-gray-700 dark:text-gray-400">
                       {resumeData.education.duration} | CGPA:{" "}
                       <strong className="font-semibold">
                         {resumeData.education.cgpa}
@@ -124,11 +124,11 @@ export function ResumePage() {
                     </p>
                   </div>
                   <div>
-                    <h3 className="text-lg text-gray-800 dark:text-gray-100 font-medium">
+                    <h3 className="text-lg text-gray-900 dark:text-gray-100 font-medium">
                       {resumeData.education.highSchool.institution}
                     </h3>
                     <p>{resumeData.education.highSchool.board}</p>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-sm text-gray-700 dark:text-gray-400">
                       Percentage:{" "}
                       <strong className="font-semibold">
                         {resumeData.education.highSchool.score}
@@ -145,7 +145,7 @@ export function ResumePage() {
                   <div className="space-y-4">
                     {resumeData.skills.map((skill) => (
                       <div key={skill.title}>
-                        <h4 className="font-semibold italic text-gray-800 dark:text-gray-200 underline underline-offset-4 decoration-black/20 dark:decoration-white/20 mb-1">
+                        <h4 className="font-semibold italic text-gray-900 dark:text-gray-200 underline underline-offset-4 decoration-black/20 dark:decoration-white/20 mb-1">
                           {skill.title}
                         </h4>
                         <p>{skill.items}</p>
@@ -160,10 +160,10 @@ export function ResumePage() {
                       className="flex items-center justify-between"
                     >
                       <div>
-                        <h3 className="text-lg text-gray-800 dark:text-gray-100 font-medium">
+                        <h3 className="text-lg text-gray-900 dark:text-gray-100 font-medium">
                           {cert.title}
                         </h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">
+                        <p className="text-sm text-gray-700 dark:text-gray-400">
                           {cert.issuer} | {cert.date}
                         </p>
                       </div>
@@ -171,7 +171,7 @@ export function ResumePage() {
                         href={cert.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300 border border-black/10 dark:border-white/10 px-3 py-1 rounded-full hover:border-black/20 dark:hover:border-white/30"
+                        className="flex items-center gap-2 text-sm text-gray-700 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300 border border-black/10 dark:border-white/10 px-3 py-1 rounded-full hover:border-black/20 dark:hover:border-white/30"
                       >
                         <FaExternalLinkAlt size={12} />
                         <span>View</span>
@@ -183,7 +183,7 @@ export function ResumePage() {
               <div className="w-full lg:w-1/3 lg:sticky top-8 h-fit">
                 <div>
                   <h3
-                    className="text-lg font-semibold text-black dark:text-white mb-4"
+                    className="text-lg font-semibold text-black dark:text-white mb-4 drop-shadow-sm"
                     style={{ fontFamily: "'General Sans', sans-serif" }}
                   >
                     Resume
