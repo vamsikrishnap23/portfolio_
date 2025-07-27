@@ -9,9 +9,9 @@ const resumeData = {
     duration: "2023 - 2027",
     cgpa: "9.25/10",
     highSchool: {
-      institution: "[your 12th grade school name]",
-      board: "[your board, e.g., cbse, isc]",
-      score: "[your percentage/grade]",
+      institution: "narayana juior college",
+      board: "Board Of Intermediate Education | Andhra Pradesh India",
+      score: "97.8 %",
     },
   },
   relevantCoursework: [
@@ -78,8 +78,14 @@ export function ResumePage() {
             style={{ fontFamily: "'General Sans', sans-serif" }}
           >
             <FaArrowLeft className="transition-transform duration-300 group-hover:-translate-x-1" />
-            <span className="italic">back to home</span>
+            <span className="italic">/home</span>
           </Link>
+          <h1
+            className="text-3xl font-semibold text-gray-900 dark:text-gray-100 mb-4"
+            style={{ fontFamily: "'General Sans', sans-serif" }}
+          >
+            /resume
+          </h1>
           <div
             className="p-8 rounded-2xl border border-black/10 dark:border-white/10"
             style={{
@@ -107,7 +113,7 @@ export function ResumePage() {
                     </h3>
                     <p>{resumeData.education.highSchool.board}</p>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      score: {resumeData.education.highSchool.score}
+                      percentage: {resumeData.education.highSchool.score}
                     </p>
                   </div>
                 </ResumeSection>
@@ -161,7 +167,7 @@ export function ResumePage() {
                     className="text-lg font-semibold text-black dark:text-white mb-4"
                     style={{ fontFamily: "'General Sans', sans-serif" }}
                   >
-                    document
+                    Resume
                   </h3>
                   <div className="hidden lg:block aspect-[3/4] rounded-lg overflow-hidden border border-black/10 dark:border-white/10 mb-4">
                     <iframe

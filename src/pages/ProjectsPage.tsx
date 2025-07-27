@@ -47,6 +47,12 @@ export function ProjectsPage() {
             <FaArrowLeft className="transition-transform duration-300 group-hover:-translate-x-1" />
             <span className="italic">/home</span>
           </Link>
+          <h1
+            className="text-3xl font-semibold text-gray-900 dark:text-gray-100 mb-4"
+            style={{ fontFamily: "'General Sans', sans-serif" }}
+          >
+            /projects
+          </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lowercase">
             {projectsData.map((project, index) => (
               <ProjectCard

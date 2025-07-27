@@ -11,7 +11,7 @@ import { ResumePage } from "./pages/ResumePage";
 import { ThemeProvider } from "./components/layout/ThemeProvider";
 import { ThemeToggle } from "./components/shared/ThemeToggle";
 import { Background } from "./components/layout/Background";
-
+import { NowPage } from "./pages/NowPage";
 const ContactPage = () => (
   <div className="h-screen w-full flex items-center justify-center bg-white dark:bg-black text-black dark:text-white text-3xl font-serif">
     Contact Page
@@ -26,7 +26,7 @@ function AppRoutes() {
         <Route path="/" element={<HomePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/resume" element={<ResumePage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/now" element={<NowPage />} />
       </Routes>
     </AnimatePresence>
   );
