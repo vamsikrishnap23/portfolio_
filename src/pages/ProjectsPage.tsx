@@ -54,7 +54,7 @@ export function ProjectsPage() {
             /projects
           </h1>
           <p
-            className="text-base text-gray-700 dark:text-gray-400 mb-4 lowercase"
+            className="text-base text-gray-700 dark:text-gray-400 mb-4"
             style={{ fontFamily: "'Inter', sans-serif'" }}
           >
             Things I’ve built recently — practical, simple, and still improving.
@@ -62,7 +62,7 @@ export function ProjectsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projectsData.map((project, index) => (
-              <ProjectCard key={index} index={index} {...project} />
+              <ProjectCard key={index} {...project} />
             ))}
           </div>
         </div>

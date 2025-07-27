@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaArrowLeft, FaDownload, FaExternalLinkAlt } from "react-icons/fa";
 import { PageLayout } from "../components/layout/PageLayout";
+import React from "react";
 
 const resumeData = {
   education: {
@@ -50,7 +51,13 @@ const resumeData = {
   ],
 };
 
-const ResumeSection = ({ title, children }) => (
+// Define the type for the component's props
+interface ResumeSectionProps {
+  title: string;
+  children: React.ReactNode;
+}
+
+const ResumeSection = ({ title, children }: ResumeSectionProps) => (
   <div className="mb-12 last:mb-0">
     <h2
       className="text-2xl font-semibold text-black dark:text-white mb-4 border-b border-black/10 dark:border-white/10 pb-2 capitalize"
@@ -87,7 +94,7 @@ export function ResumePage() {
             /resume
           </h1>
           <p
-            className="text-base text-gray-700 dark:text-gray-400 mb-4 lowercase"
+            className="text-base text-gray-700 dark:text-gray-400 mb-4"
             style={{ fontFamily: "'Inter', sans-serif'" }}
           >
             My background, skills, and what I’ve worked on so far.

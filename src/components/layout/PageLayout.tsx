@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, type Transition } from "framer-motion";
+import React from "react";
 
 const pageVariants = {
   initial: {
@@ -15,13 +16,18 @@ const pageVariants = {
   },
 };
 
-const pageTransition = {
+const pageTransition: Transition = {
   type: "tween",
   ease: "anticipate",
   duration: 0.5,
 };
 
-export const PageLayout = ({ children }) => {
+// Define the type for the component's props
+interface PageLayoutProps {
+  children: React.ReactNode;
+}
+
+export const PageLayout = ({ children }: PageLayoutProps) => {
   return (
     <motion.div
       initial="initial"
@@ -29,6 +35,7 @@ export const PageLayout = ({ children }) => {
       exit="out"
       variants={pageVariants}
       transition={pageTransition}
+      className="relative"
     >
       {children}
     </motion.div>

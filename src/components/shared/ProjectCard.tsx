@@ -1,6 +1,19 @@
 import { FaGithub } from "react-icons/fa";
 
-export const ProjectCard = ({ title, description, tags, link }) => {
+// Define the types for the component props
+interface ProjectCardProps {
+  title: string;
+  description: string;
+  tags: string[];
+  link: string;
+}
+
+export const ProjectCard = ({
+  title,
+  description,
+  tags,
+  link,
+}: ProjectCardProps) => {
   return (
     <div
       className="group relative flex flex-col justify-between p-8 rounded-2xl border border-black/10 dark:border-white/10 overflow-hidden transition-all duration-300 hover:border-black/20 dark:hover:border-white/20"
@@ -27,7 +40,7 @@ export const ProjectCard = ({ title, description, tags, link }) => {
       </div>
       <div className="relative flex justify-between items-end mt-6">
         <div className="flex flex-wrap gap-2">
-          {tags.map((tag, i) => (
+          {tags.map((tag: string, i: number) => (
             <span
               key={i}
               className="text-xs text-violet-800 dark:text-violet-300 bg-violet-500/10 dark:bg-violet-900/30 px-2 py-1 rounded-full"

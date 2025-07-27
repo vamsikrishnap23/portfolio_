@@ -1,11 +1,19 @@
 import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { PageLayout } from "../components/layout/PageLayout";
+import type { IconType } from "react-icons";
 
-const SocialLink = ({ href, icon: Icon, isEmail = false }) => (
+// Define props type for SocialLink
+interface SocialLinkProps {
+  href: string;
+  icon: IconType;
+  isEmail?: boolean;
+}
+
+const SocialLink = ({ href, icon: Icon, isEmail = false }: SocialLinkProps) => (
   <a
-    href={isEmail ? `mailto:${href}` : href}
-    target={isEmail ? "_self" : "_blank"}
+    href={isEmail ? href : href}
+    target="_blank"
     rel="noopener noreferrer"
     className="text-gray-500 dark:text-gray-500 hover:text-black dark:hover:text-white transition-colors duration-300"
   >
@@ -17,7 +25,7 @@ export function HomePage() {
   return (
     <PageLayout>
       <div className="flex h-screen w-full items-center justify-start bg-transparent p-8 sm:px-16 md:px-24 relative">
-        <div className="max-w-3xl text-left relative z-10 lowercase">
+        <div className="max-w-3xl text-left relative z-10">
           <h2
             className="text-4xl md:text-6xl font-semibold text-gray-900 dark:text-gray-100 leading-tight capitalize"
             style={{ fontFamily: "'General Sans', sans-serif" }}
@@ -55,7 +63,7 @@ export function HomePage() {
             background.
           </p>
 
-          <div className="mt-12 mb-8 h-px w-full bg-black/10 dark:bg-white/10" />
+          <div className="mt-12 mb-8 h-px w-full bg-black/20 dark:bg-white/10" />
 
           <div
             className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8"
