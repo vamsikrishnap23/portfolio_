@@ -23,8 +23,8 @@ export function NowPage() {
             /now
           </h1>
           <p
-            className="mt-4 text-lg text-gray-600 dark:text-gray-300"
-            style={{ fontFamily: "'Inter', sans-serif" }}
+            className="text-base text-gray-700 dark:text-gray-400 mb-4 lowercase"
+            style={{ fontFamily: "'Inter', sans-serif'" }}
           >
             A snapshot of what I’m currently focused on.
           </p>
@@ -49,7 +49,7 @@ export function NowPage() {
                 rel="noopener noreferrer"
                 className="underline font-medium italic hover:text-black dark:hover:text-white"
               >
-                Altara
+                altara
               </a>
               , I am contributing to AI workflow automation. My work involves
               building tools that leverage LLMs for lead profiling, persona

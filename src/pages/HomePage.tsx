@@ -36,8 +36,9 @@ export function HomePage() {
             className="mt-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
-            I’m a <strong>developer</strong> and <strong>ML enthusiast</strong>{" "}
-            exploring the intersection of <em>AI</em>, <em>automation</em>, and{" "}
+            I’m a <strong>developer</strong> working with{" "}
+            <strong>machine learning</strong> and <em>AI systems</em>, exploring
+            the intersection of <em>automation</em> and{" "}
             <strong>clean design</strong>. I’ve built{" "}
             <strong>GenAI tools</strong>, <strong>FastAPI backends</strong>, and
             lightweight web apps with a focus on <u>solving real problems</u>.

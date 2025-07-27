@@ -13,13 +13,13 @@ export const ProjectCard = ({ title, description, tags, link }) => {
       <div className="dark:bg-black/20 bg-white/20 absolute -inset-2 transition-all duration-500 opacity-0 group-hover:opacity-100"></div>
       <div className="relative">
         <h3
-          className="text-2xl font-semibold text-gray-900 dark:text-gray-100 capitalize"
+          className="text-2xl font-semibold text-gray-900 dark:text-gray-100"
           style={{ fontFamily: "'General Sans', sans-serif" }}
         >
           {title}
         </h3>
         <p
-          className="mt-3 text-gray-600 dark:text-gray-400 leading-relaxed"
+          className="mt-3 text-gray-700 dark:text-gray-400 leading-relaxed"
           style={{ fontFamily: "'Inter', sans-serif" }}
         >
           {description}

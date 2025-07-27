@@ -4,48 +4,48 @@ import { PageLayout } from "../components/layout/PageLayout";
 
 const resumeData = {
   education: {
-    institution: "vellore institute of technology",
-    degree: "b.tech in computer science and engineering",
+    institution: "Vellore Institute of Technology",
+    degree: "B.Tech in Computer Science and Engineering",
     duration: "2023 - 2027",
-    cgpa: "9.25/10",
+    cgpa: "9.25*/10",
     highSchool: {
-      institution: "narayana juior college",
-      board: "Board Of Intermediate Education | Andhra Pradesh India",
-      score: "97.8 %",
+      institution: "Narayana Junior College",
+      board: "Board of Intermediate Education | Andhra Pradesh",
+      score: "97.8%",
     },
   },
   relevantCoursework: [
-    "data structures & algorithms",
-    "machine learning & deep learning",
-    "computer networks",
-    "artificial intelligence",
-    "cloud computing",
-    "database management systems",
-    "operating systems",
-    "web development",
+    "Data Structures & Algorithms",
+    "Machine Learning & Deep Learning",
+    "Computer Networks",
+    "Artificial Intelligence",
+    "Cloud Computing",
+    "Database Management Systems",
+    "Operating Systems",
+    "Web Development",
   ],
   skills: [
-    { title: "languages", items: "javascript, python, c++, java" },
+    { title: "Languages", items: "JavaScript, Python, C, C++, Java" },
     {
-      title: "web & frontend",
-      items: "next.js/react.js, tailwind css, html, css",
+      title: "Web & Frontend",
+      items: "Next.js/React.js, Tailwind CSS, HTML, CSS",
     },
     {
-      title: "backend & apis",
-      items: "flask, supabase, sql, postgresql, fastapi",
+      title: "Backend & APIs",
+      items: "FastAPI, SQL, PostgreSQL, Flask, Supabase",
     },
     {
-      title: "ml & ai",
-      items: "tensorflow, pytorch, scikit-learn, numpy, pandas, streamlit",
+      title: "ML & AI",
+      items: "TensorFlow, PyTorch, Scikit-learn, NumPy, Pandas, Streamlit",
     },
-    { title: "tools & platforms", items: "git, github, postman, linux" },
+    { title: "Tools & Platforms", items: "Git, GitHub, Postman, Linux" },
   ],
   certifications: [
     {
-      title: "gen ai using ibm watsonx",
-      issuer: "ibm career education",
-      date: "june 2025",
-      link: "#",
+      title: "Gen AI using IBM watsonx",
+      issuer: "IBM Career Education",
+      date: "June 2025",
+      link: "https://courses.vit.skillsnetwork.site/certificates/c12a93d52bf9448f98d30060ba08df7d",
     },
   ],
 };
@@ -53,13 +53,13 @@ const resumeData = {
 const ResumeSection = ({ title, children }) => (
   <div className="mb-12 last:mb-0">
     <h2
-      className="text-2xl font-semibold text-black dark:text-white mb-4 border-b border-black/10 dark:border-white/10 pb-2"
+      className="text-2xl font-semibold text-black dark:text-white mb-4 border-b border-black/10 dark:border-white/10 pb-2 capitalize"
       style={{ fontFamily: "'General Sans', sans-serif" }}
     >
       {title}
     </h2>
     <div
-      className="text-gray-600 dark:text-gray-300"
+      className="text-gray-700 dark:text-gray-300"
       style={{ fontFamily: "'Inter', sans-serif" }}
     >
       {children}
@@ -71,21 +71,28 @@ export function ResumePage() {
   return (
     <PageLayout>
       <div className="min-h-screen w-full bg-transparent p-8 sm:px-16 md:px-24 relative">
-        <div className="relative z-10 w-full max-w-7xl mx-auto lowercase">
+        <div className="relative z-10 w-full max-w-7xl mx-auto">
           <Link
             to="/"
-            className="group flex items-center gap-2 text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white transition-colors duration-300 mb-12"
+            className="group flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300 mb-12"
             style={{ fontFamily: "'General Sans', sans-serif" }}
           >
             <FaArrowLeft className="transition-transform duration-300 group-hover:-translate-x-1" />
             <span className="italic">/home</span>
           </Link>
           <h1
-            className="text-3xl font-semibold text-gray-900 dark:text-gray-100 mb-4"
+            className="text-3xl font-semibold text-gray-900 dark:text-gray-100 mb-1"
             style={{ fontFamily: "'General Sans', sans-serif" }}
           >
             /resume
           </h1>
+          <p
+            className="text-base text-gray-700 dark:text-gray-400 mb-4 lowercase"
+            style={{ fontFamily: "'Inter', sans-serif'" }}
+          >
+            My background, skills, and what I’ve worked on so far.
+          </p>
+
           <div
             className="p-8 rounded-2xl border border-black/10 dark:border-white/10"
             style={{
@@ -102,9 +109,11 @@ export function ResumePage() {
                       {resumeData.education.institution}
                     </h3>
                     <p>{resumeData.education.degree}</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      {resumeData.education.duration} | cgpa:{" "}
-                      {resumeData.education.cgpa}
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      {resumeData.education.duration} | CGPA:{" "}
+                      <strong className="font-semibold">
+                        {resumeData.education.cgpa}
+                      </strong>
                     </p>
                   </div>
                   <div>
@@ -112,13 +121,16 @@ export function ResumePage() {
                       {resumeData.education.highSchool.institution}
                     </h3>
                     <p>{resumeData.education.highSchool.board}</p>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">
-                      percentage: {resumeData.education.highSchool.score}
+                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                      Percentage:{" "}
+                      <strong className="font-semibold">
+                        {resumeData.education.highSchool.score}
+                      </strong>
                     </p>
                   </div>
                 </ResumeSection>
                 <ResumeSection title="relevant coursework">
-                  <p className="capitalize leading-relaxed">
+                  <p className="leading-relaxed">
                     {resumeData.relevantCoursework.join(" · ")}
                   </p>
                 </ResumeSection>
@@ -126,8 +138,8 @@ export function ResumePage() {
                   <div className="space-y-4">
                     {resumeData.skills.map((skill) => (
                       <div key={skill.title}>
-                        <h4 className="font-medium text-gray-700 dark:text-gray-200 capitalize">
-                          {skill.title}:
+                        <h4 className="font-semibold italic text-gray-800 dark:text-gray-200 underline underline-offset-4 decoration-black/20 dark:decoration-white/20 mb-1">
+                          {skill.title}
                         </h4>
                         <p>{skill.items}</p>
                       </div>
@@ -144,7 +156,7 @@ export function ResumePage() {
                         <h3 className="text-lg text-gray-800 dark:text-gray-100 font-medium">
                           {cert.title}
                         </h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                        <p className="text-sm text-gray-600 dark:text-gray-400">
                           {cert.issuer} | {cert.date}
                         </p>
                       </div>
@@ -152,10 +164,10 @@ export function ResumePage() {
                         href={cert.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300 border border-black/10 dark:border-white/10 px-3 py-1 rounded-full hover:border-black/20 dark:hover:border-white/30"
+                        className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white transition-colors duration-300 border border-black/10 dark:border-white/10 px-3 py-1 rounded-full hover:border-black/20 dark:hover:border-white/30"
                       >
                         <FaExternalLinkAlt size={12} />
-                        <span>view</span>
+                        <span>View</span>
                       </a>
                     </div>
                   ))}
@@ -182,7 +194,7 @@ export function ResumePage() {
                     className="w-full flex items-center justify-center gap-2 bg-black/5 dark:bg-white/10 hover:bg-black/10 dark:hover:bg-white/20 text-black dark:text-white font-medium py-3 px-4 rounded-lg transition-colors duration-300"
                   >
                     <FaDownload />
-                    <span>download pdf</span>
+                    <span>Download PDF</span>
                   </a>
                 </div>
               </div>
