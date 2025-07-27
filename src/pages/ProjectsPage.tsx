@@ -41,6 +41,18 @@ const MeshGradientStyles = () => (
     @keyframes violetGlow { 0%, 100% { opacity: 0.5; } 50% { opacity: 0.9; } }
     #pink-swatch { animation: pinkGlow 12s ease-in-out infinite; }
     #violet-swatch { animation: violetGlow 15s ease-in-out infinite; }
+    
+    /* New animation for the project cards */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
   `}</style>
 );
 
@@ -103,13 +115,13 @@ export function ProjectsPage() {
             style={{ fontFamily: "'General Sans', sans-serif" }}
           >
             <FaArrowLeft className="transition-transform duration-300 group-hover:-translate-x-1" />
-            <span className="italic">back to home</span>
+            <span className="italic">/home</span>
           </Link>
 
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lowercase">
             {projectsData.map((project, index) => (
-              <ProjectCard key={index} {...project} />
+              <ProjectCard key={index} index={index} {...project} />
             ))}
           </div>
         </div>
