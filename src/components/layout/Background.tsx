@@ -12,12 +12,18 @@ const MeshGradientStyles = () => (
       50% { opacity: 1; }
     }
 
-    #pink-swatch, #light-pink-swatch {
-      animation: pinkGlow 12s ease-in-out infinite;
+    @keyframes movePink {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(40px, -30px) rotate(20deg); }
+      50% { transform: translate(-20px, 50px) rotate(-10deg); }
+      75% { transform: translate(-30px, -20px) rotate(15deg); }
     }
 
-    #violet-swatch, #light-violet-swatch {
-      animation: violetGlow 15s ease-in-out infinite;
+    @keyframes moveViolet {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      25% { transform: translate(-30px, 20px) rotate(-15deg); }
+      50% { transform: translate(50px, -40px) rotate(10deg); }
+      75% { transform: translate(10px, 30px) rotate(-5deg); }
     }
   `}</style>
 );
@@ -30,13 +36,12 @@ const DarkBackground = () => (
     preserveAspectRatio="xMidYMid slice"
   >
     <defs>
-      <filter id="blur-dark" x="0" y="0" width="1000" height="500">
+      <filter id="blur-dark" x="-100%" y="-100%" width="300%" height="300%">
         <feGaussianBlur stdDeviation="100" />
       </filter>
     </defs>
     <rect width="100%" height="100%" fill="#000" />
     <g id="swatches" filter="url(#blur-dark)">
-      {/* Removed the rectangle that caused the rectangle bug */}
       <rect
         id="pink-swatch"
         x="140"
@@ -44,6 +49,10 @@ const DarkBackground = () => (
         width="420"
         height="224"
         fill="#FF0197"
+        style={{
+          animation:
+            "pinkGlow 12s ease-in-out infinite, movePink 22s ease-in-out infinite",
+        }}
       />
       <rect
         id="violet-swatch"
@@ -52,6 +61,10 @@ const DarkBackground = () => (
         width="210"
         height="240"
         fill="#8024C7"
+        style={{
+          animation:
+            "violetGlow 15s ease-in-out infinite, moveViolet 28s ease-in-out infinite",
+        }}
       />
     </g>
   </svg>
@@ -65,7 +78,7 @@ const LightBackground = () => (
     preserveAspectRatio="xMidYMid slice"
   >
     <defs>
-      <filter id="blur-light" x="0" y="0" width="1000" height="500">
+      <filter id="blur-light" x="-100%" y="-100%" width="300%" height="300%">
         <feGaussianBlur stdDeviation="100" />
       </filter>
     </defs>
@@ -78,6 +91,10 @@ const LightBackground = () => (
         width="420"
         height="224"
         fill="#FF0197"
+        style={{
+          animation:
+            "pinkGlow 12s ease-in-out infinite, movePink 22s ease-in-out infinite",
+        }}
       />
       <rect
         id="light-violet-swatch"
@@ -86,6 +103,10 @@ const LightBackground = () => (
         width="210"
         height="240"
         fill="#8024C7"
+        style={{
+          animation:
+            "violetGlow 15s ease-in-out infinite, moveViolet 28s ease-in-out infinite",
+        }}
       />
     </g>
   </svg>
